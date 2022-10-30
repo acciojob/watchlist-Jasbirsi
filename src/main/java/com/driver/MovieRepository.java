@@ -61,12 +61,12 @@ public class MovieRepository {
         return movieDirectorPair.get(name);
     }
 
-    public List<Movie> findAllMovies()
+    public List<String> findAllMovies()
     {
-        List<Movie> listOfMovies=new ArrayList<>();
+        List<String> listOfMovies=new ArrayList<>();
         for (String movie:movies.keySet())
         {
-            listOfMovies.add(movies.get(movie));
+            listOfMovies.add(movie);
         }
 
         return listOfMovies;

@@ -105,10 +105,10 @@ public class MovieController {
     }
 
     @GetMapping("/get-all-movies")
-    public ResponseEntity<List<Movie>> findAllMovies()
+    public ResponseEntity<List<String>> findAllMovies()
     {
         try {
-            List<Movie> listOfMovies=new ArrayList<>();
+            List<String> listOfMovies=new ArrayList<>();
             listOfMovies = serviceobj.findAllMovies();
             return new ResponseEntity<>(listOfMovies, HttpStatus.ACCEPTED);
         }
